@@ -1,0 +1,557 @@
+:root {
+  --primary-bg: #1a3a52;
+  --secondary-bg: #2a5a7a;
+  --accent: #d4af37;
+  --text-light: #e8e8e8;
+}
+
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* Global */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", sans-serif;
+  background-color: #1a3a52;
+  color: #e8e8e8;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 60px;
+  margin: 0 auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  height: auto;
+}
+
+section {
+  padding: 100px 60px;
+}
+
+section > * {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+/* Top Bar */
+.top-bar {
+  background: #2a5a7a;
+  font-size: 13px;
+  padding: 8px 60px;
+  display: flex;
+  gap: 30px;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(
+      rgba(20, 40, 60, 0.5),
+      rgba(20, 40, 60, 0.5)
+    ),
+    url("https://via.placeholder.com/1600x900");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  font-weight: 550;
+  margin: 0 0 20px;
+  color: #ffffff;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.45);
+}
+
+.primary-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 16px 36px;
+  background: #d4af37;
+  color: #0b1c2d;
+  font-weight: 700;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 13px;
+  border: none;
+  font-family: inherit;
+}
+
+.primary-btn:hover {
+  background: #e8c547;
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.35);
+  transform: translateY(-2px);
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  gap: 60px;
+  text-align: right;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+
+.about-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 150px; /* fixed column so image stays to the right */
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Attorney Section */
+.attorney-section {
+  background: #2a5a7a;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+  .attorney-section,
+  .about-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-image {
+    flex: none;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
+/* Trust Section */
+.trust-section {
+  background: #1a3a52;
+  padding: 100px 60px;
+  text-align: center;
+}
+
+.trust-section h2 {
+  font-size: 32px;
+  margin-bottom: 60px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.trust-card {
+  background: #2a5a7a;
+  padding: 30px 20px;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.trust-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(212, 175, 55, 0.15);
+  background: #3a7a9a;
+}
+
+.trust-icon {
+  font-size: 48px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.trust-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #d4af37;
+  margin: 15px 0;
+  letter-spacing: 0.3px;
+}
+
+.trust-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ddd;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .trust-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-section {
+    padding: 80px 20px;
+  }
+}
+
+/* Practice Areas */
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.practice-tile {
+  height: 220px;
+  background: linear-gradient(
+      rgba(5, 15, 30, 0.6),
+      rgba(5, 15, 30, 0.6)
+    ),
+    url("https://via.placeholder.com/600x400");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+/* Contact */
+.contact-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-section iframe {
+  margin-top: 20px;
+  border: none;
+}
+
+/* Right Side Menu */
+.side-menu {
+  position: fixed;
+  right: 30px;
+  top: 40px;
+  transform: translateY(-100%); /* hidden by default (moved off-screen top) */
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.28s ease, opacity 0.28s ease;
+  z-index: 1200;
+  background: #2a5a7a;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.side-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+/* Booking Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  padding: 1px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  position: fixed; /* place at extreme top-right */
+  right: 30px;
+  top: 12px;
+  z-index: 1400;
+}
+
+.hamburger span {
+  display: block;
+  width: 12px;
+  height: 0.5px;
+  background: #eaeaea;
+  border-radius: 2px;
+}
+
+/* Hide hamburger on very large screens if you want menu visible by default. Keep visible for now. */
+
+/* Modal Box */
+.modal {
+  background: #2a5a7a;
+  color: #ffffff;
+  padding: 32px;
+  width: 100%;
+  max-width: 420px; /* keeps it centered and not too wide */
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* ensures even spacing between inputs/buttons */
+}
+
+
+
+/* Heading */
+.modal h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs */
+.modal input,
+.modal textarea {
+  width: 100%;
+  padding: 13px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+  background: #f9fafb;
+  color: #000;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.modal input:focus,
+.modal textarea:focus {
+  outline: none;
+  border-color: #d4af37;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+/* Submit Button – Complimentary to Yellow */
+.modal button {
+  width: 100%;
+  background: #d4af37; /* professional gold */
+  color: #0b1c2d;
+  padding: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+}
+
+/* Hover */
+.modal button:hover {
+  background: #e8c547;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(212, 175, 55, 0.35);
+}
+
+/* Close Button */
+.close-btn {
+  text-align: right;
+  cursor: pointer;
+  font-size: 13px;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+.close-btn {
+  align-self: flex-end; /* pushes it to the right */
+  margin-bottom: 8px;
+}
+
+.modal h2 {
+  margin: 0 0 16px 0;
+  text-align: center; /* centers the title */
+}
+
+
+/* Animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Practice Section */
+.practice-section {
+  padding: 100px 60px;
+  background: #1a3a52;
+  color: #fff;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 50px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Grid Layout */
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Card */
+.practice-card {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.practice-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Dark overlay */
+.practice-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 28, 45, 0.65);
+  z-index: 1;
+  transition: background 0.4s ease;
+}
+
+/* Content wrapper */
+.practice-card .practice-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+  width: calc(100% - 40px);
+}
+
+/* Title */
+.practice-card h3 {
+  color: #d4af37;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.3px;
+}
+
+/* Subtitle */
+.practice-card h4 {
+  color: #ccc;
+  font-size: 13px;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Hover effect */
+.practice-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.practice-card:hover img {
+  transform: scale(1.08);
+}
+
+.map-container {
+  margin-top: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
