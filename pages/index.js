@@ -2,10 +2,6 @@ import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
-<head>
-  <meta name="google-site-verification" content="C0S0tB8-hwxtGAqpCez6GHVOB5XyDvE7E9jFYJfvf-Y" />
-</head>
-
 const slides = [
   {
     image: "/Slide1.jpg",
