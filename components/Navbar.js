@@ -1,6 +1,8 @@
 import Link from "next/link";
 
-<meta name="google-site-verification" content="C0S0tB8-hwxtGAqpCez6GHVOB5XyDvE7E9jFYJfvf-Y" />
+<head>
+  <meta name="google-site-verification" content="C0S0tB8-hwxtGAqpCez6GHVOB5XyDvE7E9jFYJfvf-Y" />
+</head>
 
 export default function Navbar() {
   const toggleMenu = () => {
