@@ -183,7 +183,7 @@ With professionalism and integrity at the core of his practice, he strives to se
       <section id="contact" className="contact-section">
         <h2>Get in Touch</h2>
 
-        <p>📞 +91 8979798998</p>
+        <p>📞 +91 8867208883</p>
         <p>✉️ sudhirlegal22@gmail.com</p>
         <p>📍 #26, Ramamurthy Nagar old Police Station Building,
           1st Floor, Ramamurthy Nagar, Bengaluru-560016
